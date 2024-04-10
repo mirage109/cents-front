@@ -13,9 +13,9 @@ const Form = () => {
     };
   return (
     <div className="max-w-[40%] ">
-      <FormName onSubmit={handleFormSubmit}  />
-      <FormNumbers name={name} />
-      <FormResult />
+        {step === 1 && <FormName onSubmit={handleFormSubmit} />}
+        {step === 2 && <FormNumbers name={name} />}
+        {step === 3 && <FormResult />}
     </div>
   );
 };
