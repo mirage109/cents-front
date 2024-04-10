@@ -1,7 +1,7 @@
 
 const FormName = () => {
   return (
-    <div>FormName</div>
+    <div className="text-2xl text-secondary font-bebas">FormName</div>
   )
 }
 
