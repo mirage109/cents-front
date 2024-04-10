@@ -2,6 +2,8 @@ import Form from "./components/Form";
 
 export default function App() {
   return (
-   <Form />
-  )
+    <div className="flex justify-center items-center h-screen">
+      <Form />
+    </div>
+  );
 }

@@ -4,7 +4,7 @@ import FormResult from "./FormResult"
 
 const Form = () => {
   return (
-    <div>
+    <div className="max-w-[40%] ">
     <FormName />
     <FormNumbers />
     <FormResult />
