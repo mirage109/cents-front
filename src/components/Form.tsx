@@ -35,7 +35,7 @@ const Form = () => {
   };
 
   return (
-    <div className="max-w-[40%] ">
+    <div className=" w-[380px] h-[300px] rounded-xl shadow-md shadow-secondary bg-lila">
       {step === 1 && <FormName onSubmit={handleFormSubmit} />}
       {step === 2 && (
         <FormNumbers

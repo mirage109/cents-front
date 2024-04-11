@@ -5,17 +5,21 @@ interface FormResultProps {
   sum: number;
 }
 
-const FormResult: React.FC<FormResultProps> = ({ name, number1, number2, sum }) => {
+const FormResult: React.FC<FormResultProps> = ({
+  name,
+  number1,
+  number2,
+  sum,
+}) => {
   return (
-    <div>
-      <h3>{name}, your nembers were:</h3>
-      <ul>
-        <li>{number1}</li>
-        <li>{number2}</li>
-      </ul>
-      <p>I will add them and add a third random number to the sum.</p>
-      <p>And the sum is: {sum}</p>
-      <p>Thanks!</p>
+    <div className="p-10 font-bebas text-xl flex flex-col justify-center items-center gap-4 text-primary">
+      <h3><span className="text-secondary">{name}</span>, your numbers were:</h3>
+      <p  className="font-bold text-3xl text-secondary"
+      >
+        {number1} <span className="text-xl text-primary font-normal"> and</span> {number2}
+      </p>
+      <p>And the sum is: <span className="font-bold text-3xl text-secondary">{sum}</span></p>
+      <p>So, What was the third number? </p>
     </div>
   );
 };

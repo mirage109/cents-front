@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         lila: "#f8f7fe",
         secondary: "#a594f9",
+        primary: "#343434",
       },
       fontFamily: {
         bebas: ["Bebas Neue","sans-serif"],
