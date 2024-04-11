@@ -5,12 +5,14 @@ interface FormNumbersProps {
   onSubmit: () => void;
   onNumber1Change: (value: string) => void;
   onNumber2Change: (value: string) => void;
+  serverError: string;
 }
 const FormNumbers: React.FC<FormNumbersProps> = ({
   name,
   onSubmit,
   onNumber1Change,
   onNumber2Change,
+  serverError,
 }) => {
   const [number1, setNumber1] = useState("");
   const [number2, setNumber2] = useState("");
@@ -18,7 +20,7 @@ const FormNumbers: React.FC<FormNumbersProps> = ({
 
   const handleSubmit = () => {
     if (!number1.trim() || !number2.trim()) {
-      setError("Both numbers must be entered");
+      setError("Both numbers must be entered.");
       return;
     }
     onSubmit();
@@ -50,7 +52,7 @@ const FormNumbers: React.FC<FormNumbersProps> = ({
         }}
         className="border border-primary rounded-md p-2 w-2/3"
       />
-      {error && <p className="text-xs text-red-500">{error}</p>}
+      {(error||serverError) && <p className="text-xs text-red-500">{error}{" "}{serverError}</p>}
       <button
         className="border-2 border-secondary rounded-md p-2 bg-secondary text-white w-2/3 hover:bg-white hover:text-secondary hover:border-secondary transition duration-500 ease-in-out"
         onClick={handleSubmit}

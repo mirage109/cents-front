@@ -22,7 +22,7 @@ const FormName: React.FC<FormNameProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="p-14 font-bebas text-xl flex flex-col justify-center items-center gap-6 text-primary ">
+    <div className="px-10 py-16 font-bebas text-xl flex flex-col justify-center items-center gap-6 text-primary ">
       <label>Hi! Please enter your name!</label>
       <input
         type="text"
@@ -31,8 +31,12 @@ const FormName: React.FC<FormNameProps> = ({ onSubmit }) => {
         onChange={handleNameChange}
         className="border border-primary rounded-md p-2 w-2/3"
       />
-       {error && <p className="text-xs text-red-500">{error}</p>}
-      <button type="button" onClick={handleSubmit} className="border-2 border-secondary rounded-md p-2 bg-secondary text-white w-2/3 hover:bg-white hover:text-secondary hover:border-secondary transition duration-500 ease-in-out">
+      {error && <p className="text-xs text-red-500">{error}</p>}
+      <button
+        type="button"
+        onClick={handleSubmit}
+        className="border-2 border-secondary rounded-md p-2 bg-secondary text-white w-2/3 hover:bg-white hover:text-secondary hover:border-secondary transition duration-500 ease-in-out"
+      >
         Next Step
       </button>
     </div>
