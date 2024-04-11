@@ -31,7 +31,7 @@ const FormName: React.FC<FormNameProps> = ({ onSubmit }) => {
         onChange={handleNameChange}
         className="border border-primary rounded-md p-2 w-2/3"
       />
-       {error && <p className="text-sm text-red-500">{error}</p>}
+       {error && <p className="text-xs text-red-500">{error}</p>}
       <button type="button" onClick={handleSubmit} className="border-2 border-secondary rounded-md p-2 bg-secondary text-white w-2/3 hover:bg-white hover:text-secondary hover:border-secondary transition duration-500 ease-in-out">
         Next Step
       </button>
